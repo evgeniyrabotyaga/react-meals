@@ -1,0 +1,92 @@
+.meals {
+  width: 120rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 5rem auto 3rem auto;
+  border-radius: 10px;
+  padding: 4rem 3rem;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+      border-bottom: 2px #f4e9cd solid;
+    }
+  }
+
+  &__object {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-name {
+    font-size: 2.8rem;
+    font-family: Poppins;
+    color: #fafafa;
+    font-weight: 300;
+  }
+
+  &__item-description {
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  &__item-price {
+    color: #fafafa;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  label {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-right: 2rem;
+    user-select: none;
+  }
+
+  input {
+    font-family: inherit;
+    font-size: 2rem;
+    padding: 0.2rem 0 0.2rem 2rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    background-color: #fafafa;
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 2rem;
+    color: #f4e9cd;
+    font-weight: 500;
+    font-size: 2.3rem;
+    background-color: #2d3436;
+    border-radius: 10px;
+    padding: 0.5rem 3rem;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #2d3436;
+      background-color: #f4e9cd;
+    }
+  }
+}

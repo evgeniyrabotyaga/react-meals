@@ -1,0 +1,137 @@
+.overlay {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.075);
+  backdrop-filter: blur(5px);
+}
+
+.cart-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f4e9cd;
+  z-index: 1000;
+  max-width: 100rem;
+  min-width: 80rem;
+  border-radius: 10px;
+  padding: 3rem 3rem;
+  animation: slide-down 300ms ease-out;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__total {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+  }
+
+  &__btn {
+    border: none;
+    background: none;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 10px;
+    padding: 0.5rem 3rem;
+    border: 2px solid #1c1d1d;
+
+    &--order {
+      background-color: #f9ca24;
+    }
+
+    &:hover {
+      background-color: #1c1d1d;
+      color: #f4e9cd;
+    }
+  }
+}
+
+.cart-item {
+  margin-bottom: 2rem;
+  border-bottom: 2px #2d3436 solid;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 0 2rem 0;
+
+  &__name {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
+  &__amount {
+    font-size: 1.4rem;
+    font-weight: 700;
+    border: 1px solid #444f52;
+    border-radius: 5px;
+    padding: 0.5rem;
+    user-select: none;
+  }
+
+  &__actions {
+    width: 16rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    border-radius: 10px;
+    width: 7rem;
+    border: none;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: black;
+    border: 2px solid #2d3436;
+    background-color: #f4e9cd;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #f1d898;
+    }
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
